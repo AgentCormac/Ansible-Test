@@ -1,0 +1,23 @@
+Ansible notes - Centos
+=============
+
+# Requires EPEL repo
+sudo yum install epel-release
+
+#install ansible
+sudo yum install ansible
+
+the above commands can be run before setting up SSH keys by adding
+--ask-pass
+
+SSH keys for password-less access
+================================
+
+We need to exchange SSH keys between the servers to authorise password-less access from remote hosts
+1.Create a public/private key for control and tower
+2.Add public key (control & tower) to authorized keys
+3.Copy .ssh directory to each machine so that each has access to the other on the same key/user
+
+For a simple guide see:
+http://kb.solarvps.com/centos/how-to-set-up-ssh-keys-with-linux-commandline/
+http://kb.solarvps.com/centos/how-to-add-your-ssh-public-key-to-centos/
