@@ -95,6 +95,8 @@ Vagrant.configure("2") do |config|
 		sudo chown -R vagrant:vagrant /home/vagrant/shared
 	SHELL
 
+	##run ssh-key setup script
+    victim.vm.provision "info", type: "shell", path: "scripts/ssh-keys.sh"  
 	##run info script
 	tower.vm.provision "info", type: "shell", path: "scripts/vminfo.sh"  
   
