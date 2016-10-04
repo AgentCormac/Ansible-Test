@@ -50,6 +50,9 @@ Vagrant.configure("2") do |config|
     control.vm.provision "info", type: "shell", path: "scripts/ssh-keys.sh"  
 	##run info script
     control.vm.provision "info", type: "shell", path: "scripts/vminfo.sh"  
+	##start ssh-agent (needed to make ansible autorizations work)
+	##run: "always", privileged: false - runs script always, on up not just provision and as vagrant user
+    control.vm.provision "info", type: "shell", path: "scripts/start-ssh-agent.sh", run: "always", privileged: false  
 
   end
 
