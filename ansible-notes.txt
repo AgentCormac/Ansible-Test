@@ -21,3 +21,15 @@ We need to exchange SSH keys between the servers to authorise password-less acce
 For a simple guide see:
 http://kb.solarvps.com/centos/how-to-set-up-ssh-keys-with-linux-commandline/
 http://kb.solarvps.com/centos/how-to-add-your-ssh-public-key-to-centos/
+
+
+Git simple guide:
+http://rogerdudler.github.io/git-guide/
+
+
+Standard directory structures created using ansible-galaxy
+ansible-galaxy init <component name>
+e.g.
+ansible-galaxy init common
+
+
