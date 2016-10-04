@@ -40,6 +40,7 @@ Vagrant.configure("2") do |config|
 		sudo yum install vim -y
 		sudo yum install epel-release -y
 		sudo yum install ansible -y	
+		sudo yum install yum-utils
 		##Install Git
 		sudo yum install git -y
 		##Turn off ansible key checking
@@ -50,9 +51,6 @@ Vagrant.configure("2") do |config|
     control.vm.provision "info", type: "shell", path: "scripts/ssh-keys.sh"  
 	##run info script
     control.vm.provision "info", type: "shell", path: "scripts/vminfo.sh"  
-	##start ssh-agent (needed to make ansible autorizations work)
-	##run: "always", privileged: false - runs script always, on up not just provision and as vagrant user
-    control.vm.provision "info", type: "shell", path: "scripts/start-ssh-agent.sh", run: "always", privileged: false  
 
   end
 
