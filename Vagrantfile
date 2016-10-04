@@ -96,7 +96,7 @@ Vagrant.configure("2") do |config|
 	SHELL
 
 	##run ssh-key setup script
-    victim.vm.provision "info", type: "shell", path: "scripts/ssh-keys.sh"  
+    tower.vm.provision "info", type: "shell", path: "scripts/ssh-keys.sh"  
 	##run info script
 	tower.vm.provision "info", type: "shell", path: "scripts/vminfo.sh"  
   
