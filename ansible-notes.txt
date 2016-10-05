@@ -32,4 +32,8 @@ ansible-galaxy init <component name>
 e.g.
 ansible-galaxy init common
 
+Use ansible-galaxy to copy the Ansible role for installing the epel repo onto Centos
+(geerlingguy.repo-epel) into the roles directory:
+ansible-galaxy install geerlingguy.repo-epel -p ./roles
+
 
