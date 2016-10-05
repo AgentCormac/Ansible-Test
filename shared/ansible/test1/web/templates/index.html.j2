@@ -1,0 +1,13 @@
+<!-This template references a special Ansible variable named ansible_managed. When
+Ansible renders this template, it will replace this variable with information about
+when the template file was generated.->
+<html>
+  <head>
+    <title>Welcome to Ansible</title>
+  </head>
+  <body>
+    <h1>nginx, configured by Ansible</h1>
+    <p>If you can see this, Ansible successfully installed nginx.</p>
+    <p>{{ ansible_managed }}</p>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+- hosts: victims
+  become: true
+  roles:
+    - geerlingguy.repo-epel
+- include: web/tasks/web-nginx.yml
